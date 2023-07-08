@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Heart/beat</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Cherry+Bomb+One&family=Hina+Mincho&family=Nova+Oval&family=Righteous&family=Roboto+Slab:wght@300&family=Ubuntu&display=swap');
+    body {
+      background: linear-gradient(to bottom, #0A6EBD, #2B2730);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 4000px; /* Adjusted width */
+      margin: 0 auto;
+      text-align: center;
+      padding: 50px;
+      color: #FFF;
+      font-family: 'Bruno Ace SC', cursive;
+    }
+
+    .glass-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 60%;
+      height: 500px;
+    }
+
+    .glass-container:first-child {
+      margin-right: 30px;
+    }
+
+    .glass-container:last-child {
+      margin-left: 30px;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    th, td {
+      padding: 8px;
+      border-bottom: 1px solid #FFF;
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #FFF;
+      font-weight: bold;
+    }
+
+    .refresh-button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 680px;
+      position: absolute;
+    }
+
+   .refresh-button {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  background-color: green;
+  transition: background-color 0.3s ease-in-out; /* Added transition property */
+}
+
+.refresh-button:hover {
+  background-color: darkgreen; /* Change the background color on hover */
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pulse Oximeter BPM / SPO2 Chart Data</h1>
+    <div class="glass-container">
+      <table>
+        <tr>
+          <th>ID</th>
+           <th>Name</th>
+            <th>Age</th>
+             <th>Gender</th>
+              <th>Birthdate</th>
+          <th>BPM</th>
+          <th>SPO2</th>
+          <th>Date</th>
+        </tr>
+       
+        <!-- Add more rows as needed -->
+      </table>
+    </div>
+  </div>
+  <div class="refresh-button-container">
+    <button class="refresh-button">Refresh</button>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var refreshButton = document.querySelector('.refresh-button');
+
+    refreshButton.addEventListener('click', function() {
+      location.reload();
+    });
+  });
+</script>
+
+</body>
+
+</html>
